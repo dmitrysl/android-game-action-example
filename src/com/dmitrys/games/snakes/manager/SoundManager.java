@@ -2,6 +2,7 @@ package com.dmitrys.games.snakes.manager;
 
 import android.content.Context;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 
 import java.util.HashMap;
@@ -52,13 +53,13 @@ public class SoundManager {
         soundPool.play(soundPoolMap.get(index), streamVolume, streamVolume, 1, -1, 1f);
     }
 
-//    public static final int MUSIC_PREVIOUS = -1;
-//    public static final int MUSIC_MENU = 0;
-//    public static final int MUSIC_GAME = 1;
-//    public static final int MUSIC_END_GAME = 2;
-//    private static Map<Integer, MediaPlayer> players = new HashMap<Integer, MediaPlayer>();
-//    private static int currentMusic = -1;
-//    private static int previousMusic = -1;
+    public static final int MUSIC_PREVIOUS = -1;
+    public static final int MUSIC_MENU = 0;
+    public static final int MUSIC_GAME = 1;
+    public static final int MUSIC_END_GAME = 2;
+    private static Map<Integer, MediaPlayer> players = new HashMap<Integer, MediaPlayer>();
+    private static int currentMusic = -1;
+    private static int previousMusic = -1;
 //
 ////    public static float getMusicVolume(Context context, int resourceId) {
 ////        String[] volumes = context.getResources().getStringArray(resourceId);
