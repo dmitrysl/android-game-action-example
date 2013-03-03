@@ -3,7 +3,6 @@ package com.dmitrys.games.snakes.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.dmitrys.games.snakes.BaseActivity;
 import com.dmitrys.games.snakes.R;
 
 /**

@@ -1,10 +1,11 @@
-package com.dmitrys.games.snakes;
+package com.dmitrys.games.snakes.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import com.dmitrys.games.snakes.R;
 import com.dmitrys.games.snakes.manager.BackgroundSoundService;
 import com.dmitrys.games.snakes.manager.SoundManager;
 import com.dmitrys.games.snakes.view.GameView;
@@ -23,7 +24,11 @@ public class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        initializeResources();
+    }
 
+    private void initializeResources() {
+        if (soundManager != null) return;
         soundManager = new SoundManager(this);
         soundManager.addSound(GameView.EXPLOSION_SOUND, R.raw.explosion);
         soundManager.addSound(GameView.DEATH_SOUND, R.raw.death);

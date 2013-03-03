@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.dmitrys.games.snakes.BaseActivity;
 import com.dmitrys.games.snakes.R;
 import com.dmitrys.games.snakes.manager.BackgroundSoundService;
 

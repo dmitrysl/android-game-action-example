@@ -1,7 +1,6 @@
 package com.dmitrys.games.snakes.activity;
 
 import android.os.Bundle;
-import com.dmitrys.games.snakes.BaseActivity;
 import com.dmitrys.games.snakes.view.GameView;
 
 public class SnakesMain extends BaseActivity {

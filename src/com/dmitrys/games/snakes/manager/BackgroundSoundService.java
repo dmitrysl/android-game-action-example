@@ -35,7 +35,7 @@ public class BackgroundSoundService extends Service {
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.theme);
-        mediaPlayer.setLooping(false); // Set looping
+        mediaPlayer.setLooping(true); // Set looping
 
         float streamVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         streamVolume = streamVolume / audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC) - 0.15f;

@@ -4,17 +4,26 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="15"/>
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <application android:name=".util.ApplicationContextProvider" android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name=".activity.SplashScreen"
+                  android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
         <activity android:name=".activity.MainMenu"
-                  android:label="@string/app_name">
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity android:name=".activity.SnakesMain" android:label="@string/app_name" />
         <activity android:name=".activity.Settings" android:label="@string/app_name" />
         <activity android:name=".activity.About" android:label="@string/app_name" />
+
         <service android:enabled="true" android:name=".manager.BackgroundSoundService" />
     </application>
 </manifest>
