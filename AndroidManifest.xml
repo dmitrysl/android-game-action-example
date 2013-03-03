@@ -5,13 +5,16 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="15"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name=".activity.SnakesMain"
+        <activity android:name=".activity.MainMenu"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.SnakesMain" android:label="@string/app_name" />
+        <activity android:name=".activity.Settings" android:label="@string/app_name" />
+        <activity android:name=".activity.About" android:label="@string/app_name" />
         <service android:enabled="true" android:name=".manager.BackgroundSoundService" />
     </application>
 </manifest>
